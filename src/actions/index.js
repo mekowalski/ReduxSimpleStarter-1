@@ -3,5 +3,10 @@
 //make sure this action creator is wired up to redux
 
 export function selectBook(book) {
-  console.log('a book has been selected:', book.title);
+  //selectBook is an action creator that needs to return an action
+  //an object with a type property(purpose of action)
+  return {
+    type: 'BOOK_SELECTED',
+    PAYLOAD: book
+  }
 }
