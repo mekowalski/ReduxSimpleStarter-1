@@ -1,10 +1,6 @@
-//purpose of this file is to render the list of books
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-//creates a UL
-//calls a helper function this.renderList
-//this.renderList will map over array of books
-//for each book in array, create an li containing book title
 export default class BookList extends Component {
   renderList() {
     return this.props.books.map((book) => {
