@@ -24,6 +24,7 @@ class BookList extends Component {
 //3. key function, take application state as argument and returns object
 //state contains array of books and activeBook
 //this function is GLUE between react and redux
+//IF STATE EVER CHANGES, CONTAINER WILL RERENDER WITH A NEW LIST OF BOOKS
 function mapStateToProps(state) {
   //what is returned will show up as props inside of BookList
   return {
@@ -32,4 +33,5 @@ function mapStateToProps(state) {
 }
 
 //2. conect takes a function and component and produces a container
+//WHEN APPLICATION STATE CHANGES, THE OBJECT IN THE STATE FUNCTION WILL BE ASSIGNED AS PROPS TO COMPONENT
 export default connect(mapStateToProps)(BookList);
