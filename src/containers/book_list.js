@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+
+//1. import connect function from react-redux
 import { connect } from 'react-redux';
 
-export default class BookList extends Component {
+class BookList extends Component {
   renderList() {
     return this.props.books.map((book) => {
       return (
@@ -18,3 +20,16 @@ export default class BookList extends Component {
     )
   }
 }
+
+//3. key function, take application state as argument and returns object
+//state contains array of books and activeBook
+//this function is GLUE between react and redux
+function mapStateToProps(state) {
+  //what is returned will show up as props inside of BookList
+  return {
+    books: state.books
+  };
+}
+
+//2. conect takes a function and component and produces a container
+export default connect(mapStateToProps)(BookList);
