@@ -7,6 +7,6 @@ export function selectBook(book) {
   //an object with a type property(purpose of action)
   return {
     type: 'BOOK_SELECTED',
-    PAYLOAD: book
+    payload: book
   }
 }
