@@ -3,9 +3,9 @@
 
 export default function() {
   return [
-    {title: 'JavaScript: The Good Parts'},
-    {title: 'The Martian'},
-    {title: 'Red Sparrow'},
-    {title: 'Eloquent Ruby'},
+    {title: 'JavaScript: The Good Parts', pages: 101},
+    {title: 'The Martian', pages: 39},
+    {title: 'Red Sparrow', pages: 85},
+    {title: 'Eloquent Ruby', pages: 1},
   ]
 }
